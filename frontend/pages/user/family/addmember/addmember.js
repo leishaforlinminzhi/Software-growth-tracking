@@ -1,4 +1,4 @@
-// pages/user/family/family.js
+// pages/user/family/addmember/addmember.js
 Page({
 
   /**
