@@ -1,7 +1,7 @@
 /* pages/show/event/event.wxss */
 .whole-page-grid{
   display: grid;
-  grid-template-rows: 10vh 10vh 30vh 10vh 1fr;
+  grid-template-rows: 10vh 1fr 30vh 10vh 1fr;
   grid-template-columns: 1fr;
   grid-template-areas:
   "A"
@@ -21,6 +21,14 @@
 .container_1 {
   grid-area: "A";
   font-size: 14px;
+
+}
+
+#title-box1{
+  height: 100%;
+  width: 15%;
+  display: flex;
+  align-items: center;
 }
 
 .input {
@@ -44,8 +52,8 @@
 }
 
 .upload_title {
-  width: 200rpx;
-  height: 80rpx;
+  width: 100%;
+  height: 5vh;
   border-radius: 100px;
   color: #ccc;
 }
@@ -70,11 +78,38 @@
   margin-right: 20rpx;
 }
 
-.image-item image {
+/* #image-grid-container{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  height: 180rpx;
-  margin-bottom: 10rpx;
+  height:30vw;
+  border: 1px solid #000;
+}  */
+
+.image-grid-item{
+  border: 1px solid #000;
+  width: 25vw;
+  height:25vw; /*设置高度宽度相等*/
+
 }
+
+.image-grid-item image{
+  display: inline;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+.add-image-butn{
+  background-color: #eee;
+  font-size: 3em;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+
+
 
 .image_delete{
   position: absolute;
