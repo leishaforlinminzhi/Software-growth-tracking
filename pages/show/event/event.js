@@ -53,6 +53,7 @@ Page({
   },
   toggleTag: function(e) {
     const { index } = e.currentTarget.dataset;
+
     const { selectedTags } = this.data;
     const tag = this.data.tags[index].info;
     const tagIndex = selectedTags.indexOf(tag);
@@ -67,16 +68,16 @@ Page({
       selectedTags: selectedTags,
       ['tags[' + index + '].checked']: this.data.tags[index].checked 
     });
-    console.log(selectedTags);
+
     console.log("index",index)
     console.log(this.data.tags[index].checked)
-    
   },
   showInput: function() {
     this.setData({
       showInput: true
     });
   },
+
   addTag: function(e) {
     const { value } = e.detail;
     if (value.trim() !== '') {
@@ -87,6 +88,7 @@ Page({
         showInput: false,
         inputValue: ''
       });
+
     } else {
       this.setData({
         showInput: false,

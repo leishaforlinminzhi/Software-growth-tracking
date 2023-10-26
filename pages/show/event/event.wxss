@@ -1,6 +1,25 @@
 /* pages/show/event/event.wxss */
-.container_1 {
+.whole-page-grid{
+  display: grid;
+  grid-template-rows: 10vh 10vh 30vh 10vh 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "A"
+  "B"
+  "C"
+  "D"
+  "E";
+  height:100vh;
+  justify-content: stretch;
+  align-items: stretch; 
+}
+
+.overall-outfit{
   padding: 20rpx;
+}
+
+.container_1 {
+  grid-area: "A";
   font-size: 14px;
 }
 
@@ -20,8 +39,7 @@
 }
 
 .container_2 {
-  margin-top: 0px;
-  padding: 20rpx;
+  grid-area: "B";
   font-size: 14px;
 }
 
@@ -39,9 +57,6 @@
   margin-top: 2px;
 }
 
-.container {
-  padding: 20rpx;
-}
 
 .image-list {
   white-space: nowrap;
@@ -73,8 +88,7 @@
 }
 
 .container_3 {
-  position: absolute;
-  padding: 20rpx;
+  grid-area: "C";
   font-size: 14px;
 }
 
@@ -90,9 +104,7 @@
 
 
 .container_4 {
-  position: absolute;
-  padding: 20rpx;
-  margin-top: 140px;
+  grid-area: "D";
   font-size: 14px;
 }
 
@@ -164,10 +176,8 @@
 }
 
 .container_5 {
-  position: absolute;
-  margin-left: 60px;
-  margin-top: 50px;
-  padding: 20rpx;
+  grid-area: "E";
+  justify-self: center;
   font-size: 14px;
 }
 
